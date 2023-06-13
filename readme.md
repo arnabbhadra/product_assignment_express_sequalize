@@ -49,4 +49,4 @@ In this requirement, product details and its different variants need to be store
 **Product** has three major properties ***name***, ***description*** and ***price***.
 **Variant** has ***name***, ***SKU***, ***additional cost*** and ***stock count***.
 A product can be of multiple variants and from that we can derive that
-product is in ***One-to-Many** relationship with variants.
+product is in **One-to-Many** relationship with variants.

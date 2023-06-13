@@ -44,6 +44,9 @@ After creating database and updating .env file run below commands
 ### Start the server
 `npm run start` to run your project 
 
+### Run test cases
+`npm run test` to run test cases
+
 ### Project Architecture Decision.
 In this requirement, product details and its different variants need to be stored, fetched updated and deleted.
 **Product** has three major properties ***name***, ***description*** and ***price***.

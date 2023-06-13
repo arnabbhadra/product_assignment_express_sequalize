@@ -34,7 +34,72 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Create a Product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"p\",\n    \"description\": \"d\",\n    \"price\": 12,\n    \"variants\": [\n        {\n            \"name\": \"variant.name\",\n            \"sku\": 1,\n            \"additional_cost\": 0,\n            \"stock_count\": 1\n        },\n        {\n            \"name\": \"variant2\",\n            \"sku\": 14,\n            \"additional_cost\": 1,\n            \"stock_count\": 100\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"50-7y3jgIVYpDf1mrUlWuvurpGMQGc\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Jun 2023 20:15:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"message\": \"Product is created successfully\"\n    },\n    \"success\": true\n}"
+				}
+			]
 		},
 		{
 			"name": "Get Product info",
@@ -69,7 +134,77 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Get Product info",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product?name=&description=d&variant_name=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "description",
+									"value": "d"
+								},
+								{
+									"key": "variant_name",
+									"value": ""
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1140"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"474-fbAmruMpz/Ktns36dMSL+OXbUDI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Jun 2023 21:31:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        {\n            \"id\": 12,\n            \"name\": \"m\",\n            \"description\": \"d\",\n            \"price\": 12,\n            \"variant_name\": \"new variante\",\n            \"sku\": 1,\n            \"additional_cost\": 0,\n            \"stock_count\": 1\n        },\n        {\n            \"id\": 13,\n            \"name\": \"p\",\n            \"description\": \"d\",\n            \"price\": 12,\n            \"variant_name\": \"variant.name\",\n            \"sku\": 1,\n            \"additional_cost\": 0,\n            \"stock_count\": 0\n        },\n        {\n            \"id\": 13,\n            \"name\": \"p\",\n            \"description\": \"d\",\n            \"price\": 12,\n            \"variant_name\": \"variant2\",\n            \"sku\": 14,\n            \"additional_cost\": 1,\n            \"stock_count\": 1\n        },\n        {\n            \"id\": 14,\n            \"name\": \"p\",\n            \"description\": \"d\",\n            \"price\": 12,\n            \"variant_name\": \"variant.name\",\n            \"sku\": 1,\n            \"additional_cost\": 0,\n            \"stock_count\": 0\n        },\n        {\n            \"id\": 14,\n            \"name\": \"p\",\n            \"description\": \"d\",\n            \"price\": 12,\n            \"variant_name\": \"variant2\",\n            \"sku\": 14,\n            \"additional_cost\": 1,\n            \"stock_count\": 1\n        },\n        {\n            \"id\": 15,\n            \"name\": \"p\",\n            \"description\": \"d\",\n            \"price\": 12,\n            \"variant_name\": \"variant.name\",\n            \"sku\": 1,\n            \"additional_cost\": 0,\n            \"stock_count\": 0\n        },\n        {\n            \"id\": 15,\n            \"name\": \"p\",\n            \"description\": \"d\",\n            \"price\": 12,\n            \"variant_name\": \"variant2\",\n            \"sku\": 14,\n            \"additional_cost\": 1,\n            \"stock_count\": 1\n        },\n        {\n            \"id\": 16,\n            \"name\": \"p\",\n            \"description\": \"d\",\n            \"price\": 12,\n            \"variant_name\": \"variant.name\",\n            \"sku\": 1,\n            \"additional_cost\": 0,\n            \"stock_count\": 0\n        },\n        {\n            \"id\": 16,\n            \"name\": \"p\",\n            \"description\": \"d\",\n            \"price\": 12,\n            \"variant_name\": \"variant2\",\n            \"sku\": 14,\n            \"additional_cost\": 1,\n            \"stock_count\": 1\n        }\n    ],\n    \"success\": true\n}"
+				}
+			]
 		},
 		{
 			"name": "Delete a Product",
@@ -97,7 +232,70 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Delete a Product",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "69"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"45-h6Ozi9/96XQN7NAfsB1Hn3nQtkk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Jun 2023 21:31:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": \"Product is deleted successfully.\",\n    \"success\": true\n}"
+				}
+			]
 		},
 		{
 			"name": "Update product and variants",
@@ -134,7 +332,79 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Update product and variants",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"m\",\n    \"description\": \"d\",\n    \"price\": 12,\n    \"deleted_variants\": [\n        2\n    ],\n    \"variants\": [\n        {\n            \"name\": \"new variante\",\n            \"sku\": 1,\n            \"additional_cost\": 0,\n            \"stock_count\": 1\n        },\n        {\n            \"id\": 2,\n            \"name\": \"update Variant\",\n            \"sku\": 14,\n            \"additional_cost\": 12,\n            \"stock_count\": 13\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "69"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"45-8c8iOYupBM5xV7xNM/VL44o9Hsk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Jun 2023 21:31:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": \"Product is updated successfully.\",\n    \"success\": true\n}"
+				}
+			]
 		}
 	]
 }

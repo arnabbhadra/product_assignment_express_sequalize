@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "a09dbfc4-c9f5-4b23-a25b-719a3c762961",
+		"name": "Mirrar-Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17649216"
+	},
+	"item": [
+		{
+			"name": "Create a Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"p\",\n    \"description\" : \"d\", \n    \"price\": 12,\n    \"variants\" : [ {\n                        \"name\": \"variant.name\",\n                        \"sku\": 1,\n                        \"additional_cost\": 0,\n                        \"stock_count\": 1\n\n                    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product info",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update product and variants",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

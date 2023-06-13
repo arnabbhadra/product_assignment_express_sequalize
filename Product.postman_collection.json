@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"p\",\n    \"description\" : \"d\", \n    \"price\": 12,\n    \"variants\" : [ {\n                        \"name\": \"variant.name\",\n                        \"sku\": 1,\n                        \"additional_cost\": 0,\n                        \"stock_count\": 1\n\n                    }]\n}",
+					"raw": "{\n    \"name\": \"p\",\n    \"description\": \"d\",\n    \"price\": 12,\n    \"variants\": [\n        {\n            \"name\": \"variant.name\",\n            \"sku\": 1,\n            \"additional_cost\": 0,\n            \"stock_count\": 1\n        },\n        {\n            \"name\": \"variant2\",\n            \"sku\": 14,\n            \"additional_cost\": 1,\n            \"stock_count\": 100\n        }\n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -40,23 +40,99 @@
 			"name": "Get Product info",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/product?name=&description=d&variant_name=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"product"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": ""
+						},
+						{
+							"key": "description",
+							"value": "d"
+						},
+						{
+							"key": "variant_name",
+							"value": ""
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Delete a Product",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/product/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Update product and variants",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"m\",\n    \"description\": \"d\",\n    \"price\": 12,\n    \"deleted_variants\": [\n        2\n    ],\n    \"variants\": [\n        {\n            \"name\": \"new variante\",\n            \"sku\": 1,\n            \"additional_cost\": 0,\n            \"stock_count\": 1\n        },\n        {\n            \"id\": 2,\n            \"name\": \"update Variant\",\n            \"sku\": 14,\n            \"additional_cost\": 12,\n            \"stock_count\": 13\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/product/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"product",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "12"
+						}
+					]
+				}
 			},
 			"response": []
 		}

@@ -33,7 +33,7 @@ some other inportant parameters/keys in **.env** file
 ```
 APP_HOST=localhost      # application host name
 APP_PORT=3000           # application port
-
+```
 ### Migration and Seeders run
 
 After creating database and updating .env file run below commands
@@ -41,7 +41,12 @@ After creating database and updating .env file run below commands
 > npm run migrate
 > npm run seed
 ```
-
 ### Start the server
-
 `npm run start` to run your project 
+
+### Project Architecture Decision.
+In this requirement, product details and its different variants need to be stored, fetched updated and deleted.
+**Product** has three major properties ***name***, ***description*** and ***price***.
+**Variant** has ***name***, ***SKU***, ***additional cost*** and ***stock count***.
+A product can be of multiple variants and from that we can derive that
+product is in ***One-to-Many** relationship with variants.

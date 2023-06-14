@@ -5,7 +5,7 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.addConstraint(
       {
-        // table name is pluralised name
+        
         tableName: 'variants',
       },
       {
@@ -13,13 +13,13 @@ module.exports = {
         type: 'FOREIGN KEY',
         references: {
           table: {
-            // table name is pluralised name
+            
             tableName: 'products',
           },
           field: 'id'
         },
         
-        name: 'FK_products_variants', // useful if using queryInterface.removeConstraint
+        name: 'FK_products_variants', 
         onDelete: 'SET NULL',
         onUpdate: 'cascade'
       })

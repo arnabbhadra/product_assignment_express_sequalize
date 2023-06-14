@@ -126,15 +126,16 @@ exports.updateProduct = async function updateProduct(product) {
                     updateVariant(variant, { id: variant.id, product_id: id, deleted: false }, transaction);
                 }));
             }
-            if (deleted_variants && Array.isArray(deleted_variants), deleted_variants.length>0) {
+            if (deleted_variants && Array.isArray(deleted_variants) && deleted_variants.length>0) {
                 dbRequests.push(deleteVariants({id: deleted_variants}, transaction));
             }
             await Promise.all(dbRequests);
+            return
         });
         return
     }
-    catch (error) {
-        
+    catch (error) {  
+        console.log(error);     
         throw error;
     }
 }

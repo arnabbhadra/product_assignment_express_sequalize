@@ -61,7 +61,7 @@ exports.getAllProducts = async function ({
             condition += `and v.name = '${variant_name}'`;
         }
         const selectQuery = `select p.id, p.name, p.description, p.price, v.name as variant_name, 
-                            v.sku, v.additional_cost, v.stock_count from products p left join
+                            v.sku, v.additional_cost, v.stock_count, v.id as variant_id from products p left join
                             public.variants v on p.id = v.product_id where (not p.deleted) and 
                             (not v.deleted)  ${condition}`
         const [products, metaData] = await sequelize.query(selectQuery);

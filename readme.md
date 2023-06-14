@@ -105,7 +105,8 @@ API to get list of products and other details
             "variant_name": "new variante",
             "sku": 1,
             "additional_cost": 0,
-            "stock_count": 1
+            "stock_count": 1,
+            "variant_id": 4
         }
     ],
     "success": true
